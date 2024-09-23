@@ -1,0 +1,15 @@
+.table{
+    background-color: #b9f5ff;
+    border-radius: 8px;
+    margin-top: 10px;
+}
+
+.tableItem{
+    border: 1px solid black;
+    padding: 8px;
+}
+
+.tableTitle{
+    padding: 4px;
+    border-bottom: 1px solid black;
+}
