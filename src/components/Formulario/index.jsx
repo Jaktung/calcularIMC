@@ -1,29 +1,27 @@
-import {useState} from 'react'
+const Formulario = (props) => {
+  console.log(props.p)
+  console.log(props.a);
+  console.log(props.r);
+  console.log(props.sr);
+  
+  
+  
 
-const Formulario = () => {
-    const [peso, setPeso] = useState(0)
-    const [altura, setAltura] = useState(0)
-    const [resultado, setResultado] = useState(0)
+        return(
+          <div>
+            <label>
+              Altura
+              <input type="text" placeholder="Digite sua Altura" required value={props.a} onChange={(e)=>{props.sa(e.target.value)}}/>
+            </label>
+            <label>
+              Peso
+              <input type="text" placeholder="Digite seu Peso" required value={props.p} onChange={(e)=>{props.sp(e.target.value)}}/>
+            </label>
+          </div>
+        )
+    } 
+      
+     
 
-    const resultadoIMC = () => {
-        const imc = peso / (altura * altura)
-        return <h2>Seu IMC é: {imc.toFixed(2)}</h2>
-    }
-
-    console.log(altura)
-    console.log(peso)
-    console.log(resultado)
-
-    return (
-        <form>
-            <label>Altura (ex: 1,74)</label>
-            <input type="number" placeholder='Digite sua altura' required onChange={(e)=>setAltura(e.target.value)}/>
-            <label>Peso (ex: 70)</label>
-            <input type="number" placeholder='Digite seu peso' required onChange={(e)=>setPeso(e.target.value)}/>
-            <button type='button' onClick={(e)=> setResultado(e.target.value)}>Calcular</button>
-            <p>Resultado: {resultadoIMC}</p> 
-        </form>
-    )
-}
 
 export default Formulario
